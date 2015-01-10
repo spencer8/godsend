@@ -3,28 +3,45 @@
 	background: $med-brwn;
 
 	&.home {
-		background: $med-brwn url('../images/starsheader.gif') repeat-x 50% 0;
+		background: $med-brwn url('../images/starsheader.gif') repeat-x 48.5% 0;
+		/* 1.5 dpr */
+		@media 
+		(-webkit-min-device-pixel-ratio: 1.5), 
+		(min-resolution: 144dpi){ 
+			background: $med-brwn url('../images/starsheader-hd.gif') repeat-x 48.5% 0;
+			background-size: 491px;
+		}
 	}
 
 	& .wrap.home {
-		height: 150px;
+		height: 130px;
 	}
 }
 
 .logolink {
-	margin: 50px 0 0;
+	margin: 40px 0 0;
 	text-align:left;
 	display:block;
+	overflow:hidden;
+	width:234px;
+	height:57px;
+	text-indent:-9999em;
+	background: transparent url('../images/logo.png') no-repeat 0 0;
+
+	/* 1.5 dpr */
+	@media 
+	(-webkit-min-device-pixel-ratio: 1.5), 
+	(min-resolution: 144dpi){ 
+		background: transparent url('../images/logo-hd.png') no-repeat 0 0;
+		background-size: 234px;
+	}
 
 	&.small {
 		float:left;
-		margin:0;
-
-		img {
-			height:20px;
-			margin:10px 0;
-			display:block;
-		}
+		margin: 10px 0 0;
+		height: 20px;
+		background-size: 81px;
+		width: 82px;		
 	}
 }
 

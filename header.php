@@ -33,13 +33,13 @@
 		<header class="header cf <?php if(is_home()) echo 'home'; ?>" role="banner">
 			<?php if(is_home()){ ?>
 			<div class="wrap home">
-				<a href="<?php echo home_url(); ?>" class="logolink"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="logo" alt="Godsend" /></a>
+				<a href="<?php echo home_url(); ?>" class="logolink"><?php bloginfo('name'); ?></a>
 			</div>
 			<?php } ?>
 			<div class="navwrap">
 				<div class="wrap">
 					<?php if(!is_home()){ ?>
-						<a href="<?php echo home_url(); ?>" class="logolink small"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="logo" alt="Godsend" /></a>
+						<a href="<?php echo home_url(); ?>" class="logolink small"><?php bloginfo('name'); ?></a>
 					<?php } ?>
 					<a href="#nav" class="nav-toggle nav-toggle-menu"><i class="icon-menu"></i><span class="is-vishidden">Menu</span></a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav' ) ); ?>

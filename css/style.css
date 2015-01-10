@@ -986,91 +986,109 @@ td {
 }
 /* line 5, scss/objects/_header.scss */
 .header.home {
-  background: #7b6e5b url("../images/starsheader.gif") repeat-x 50% 0;
+  background: #7b6e5b url("../images/starsheader.gif") repeat-x 48.5% 0;
+  /* 1.5 dpr */
 }
-/* line 9, scss/objects/_header.scss */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* line 5, scss/objects/_header.scss */
+  .header.home {
+    background: #7b6e5b url("../images/starsheader-hd.gif") repeat-x 48.5% 0;
+    background-size: 491px;
+  }
+}
+/* line 16, scss/objects/_header.scss */
 .header .wrap.home {
-  height: 150px;
+  height: 130px;
 }
 
-/* line 14, scss/objects/_header.scss */
+/* line 21, scss/objects/_header.scss */
 .logolink {
-  margin: 50px 0 0;
+  margin: 40px 0 0;
   text-align: left;
   display: block;
+  overflow: hidden;
+  width: 234px;
+  height: 57px;
+  text-indent: -9999em;
+  background: transparent url("../images/logo.png") no-repeat 0 0;
+  /* 1.5 dpr */
 }
-/* line 19, scss/objects/_header.scss */
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* line 21, scss/objects/_header.scss */
+  .logolink {
+    background: transparent url("../images/logo-hd.png") no-repeat 0 0;
+    background-size: 234px;
+  }
+}
+/* line 39, scss/objects/_header.scss */
 .logolink.small {
   float: left;
-  margin: 0;
-}
-/* line 23, scss/objects/_header.scss */
-.logolink.small img {
+  margin: 10px 0 0;
   height: 20px;
-  margin: 10px 0;
-  display: block;
+  background-size: 81px;
+  width: 82px;
 }
 
-/* line 31, scss/objects/_header.scss */
+/* line 48, scss/objects/_header.scss */
 .navwrap {
   background: #38332c;
   width: 100%;
   height: 40px;
 }
 
-/* line 37, scss/objects/_header.scss */
+/* line 54, scss/objects/_header.scss */
 .ancmnts-tog {
   text-align: right;
 }
-/* line 40, scss/objects/_header.scss */
+/* line 57, scss/objects/_header.scss */
 .ancmnts-tog .wrap {
   height: 30px;
 }
 
-/* line 50, scss/objects/_header.scss */
+/* line 67, scss/objects/_header.scss */
 .open .ancmnts-tog .tog-closed {
   display: none;
 }
 
-/* line 56, scss/objects/_header.scss */
+/* line 73, scss/objects/_header.scss */
 .closed .ancmnts-tog .tog-open {
   display: none;
 }
 
-/* line 63, scss/objects/_header.scss */
+/* line 80, scss/objects/_header.scss */
 .ancmnts-tog {
   position: relative;
 }
-/* line 67, scss/objects/_header.scss */
+/* line 84, scss/objects/_header.scss */
 .ancmnts-tog .tog-open {
   background: #e8e2d4;
 }
-/* line 70, scss/objects/_header.scss */
+/* line 87, scss/objects/_header.scss */
 .ancmnts-tog .tog-open .icon-up {
   text-align: center;
   height: 30px;
   cursor: pointer;
 }
-/* line 76, scss/objects/_header.scss */
+/* line 93, scss/objects/_header.scss */
 .ancmnts-tog .tog-open .icon-up:before {
   line-height: 30px;
   font-size: .875em;
 }
-/* line 81, scss/objects/_header.scss */
+/* line 98, scss/objects/_header.scss */
 .ancmnts-tog .tog-open .icon-font {
   display: block;
   position: absolute;
   margin: 11px 0 0;
   width: 100%;
 }
-/* line 88, scss/objects/_header.scss */
+/* line 105, scss/objects/_header.scss */
 .ancmnts-tog .tog-open .icon-font:before {
   content: '\e807';
   margin: 0;
   width: 100%;
   text-align: center;
 }
-/* line 99, scss/objects/_header.scss */
+/* line 116, scss/objects/_header.scss */
 .ancmnts-tog .tog-closed {
   background: transparent;
   height: 30px;
@@ -1080,7 +1098,7 @@ td {
   right: 0;
   width: 100%;
 }
-/* line 109, scss/objects/_header.scss */
+/* line 126, scss/objects/_header.scss */
 .ancmnts-tog .tog-closed a {
   display: inline-block;
   margin: 0 auto;
