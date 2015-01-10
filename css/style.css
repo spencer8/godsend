@@ -1,0 +1,2229 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+@font-face {
+  font-family: 'godsendicons';
+  src: url("fonts/godsendicons.eot?2488020");
+  src: url("fonts/godsendicons.eot?2488020#iefix") format("embedded-opentype"), url("fonts/godsendicons.woff?2488020") format("woff"), url("fonts/godsendicons.ttf?2488020") format("truetype"), url("fonts/godsendicons.svg?2488020#godsendicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?63208253#fontello') format('svg');
+  }
+}
+*/
+/* line 80, scss/generic/_variables.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "godsendicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  font-size: 1.125em;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+}
+
+/* line 102, scss/generic/_variables.scss */
+.icon-facebook:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 103, scss/generic/_variables.scss */
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 104, scss/generic/_variables.scss */
+.icon-deviantart:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 105, scss/generic/_variables.scss */
+.icon-rss:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 106, scss/generic/_variables.scss */
+.icon-angle-left:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 107, scss/generic/_variables.scss */
+.icon-angle-right:before {
+  content: '\e805';
+}
+
+/* '' */
+/* line 108, scss/generic/_variables.scss */
+.icon-down:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 109, scss/generic/_variables.scss */
+.icon-up:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 110, scss/generic/_variables.scss */
+.icon-angle-double-left:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 111, scss/generic/_variables.scss */
+.icon-angle-double-right:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 112, scss/generic/_variables.scss */
+.icon-angle-double-up:before {
+  content: '\e80a';
+}
+
+/* '' */
+/* line 113, scss/generic/_variables.scss */
+.icon-angle-double-down:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 114, scss/generic/_variables.scss */
+.icon-menu:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 115, scss/generic/_variables.scss */
+.icon-star:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 116, scss/generic/_variables.scss */
+.icon-cancel:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 117, scss/generic/_variables.scss */
+.icon-pencil:before {
+  content: '\e80f';
+}
+
+/* '' */
+/* line 118, scss/generic/_variables.scss */
+.icon-level-down:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 119, scss/generic/_variables.scss */
+.icon-gplus:before {
+  content: '\e811';
+}
+
+/* '' */
+/* line 120, scss/generic/_variables.scss */
+.icon-linkedin:before {
+  content: '\e812';
+}
+
+/* '' */
+/* line 121, scss/generic/_variables.scss */
+.icon-vimeo:before {
+  content: '\e813';
+}
+
+/* '' */
+/* line 122, scss/generic/_variables.scss */
+.icon-tumblr:before {
+  content: '\e814';
+}
+
+/* '' */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
+/* Franklin Small font style
+	Usage: @include font-2-style();
+ */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* line 6, scss/generic/_reset.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, scss/generic/_reset.scss */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, scss/generic/_reset.scss */
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+/*------------------------------------*\
+    $GLOBAL ELEMENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $GLOBAL CLASSES
+\*------------------------------------*/
+/* Clearfix */
+/* line 6, scss/base/_global-classes.scss */
+.cf, .g-3up, .wrap {
+  *zoom: 1;
+}
+
+/* line 9, scss/base/_global-classes.scss */
+.cf:before, .g-3up:before, .cf:after, .g-3up:after,
+.wrap:before, .wrap:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 15, scss/base/_global-classes.scss */
+.cf:after, .g-3up:after, .wrap:after {
+  clear: both;
+}
+
+/* line 19, scss/base/_global-classes.scss */
+.wrap {
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+@media all and (max-width: 730px) {
+  /* line 19, scss/base/_global-classes.scss */
+  .wrap {
+    width: 100%;
+    padding: 0 3%;
+  }
+}
+
+/* Completely remove from the flow and screen readers. */
+/* line 31, scss/base/_global-classes.scss */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+/* line 37, scss/base/_global-classes.scss */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Floats */
+/* line 48, scss/base/_global-classes.scss */
+.right {
+  float: right;
+  padding: 0 0 1rem 1rem;
+}
+
+/* line 53, scss/base/_global-classes.scss */
+.right-search {
+  float: right;
+  padding: 0 0 1rem 0;
+}
+
+/* line 58, scss/base/_global-classes.scss */
+.left {
+  float: left;
+  padding: 0 1rem 1rem 0;
+}
+
+/* line 63, scss/base/_global-classes.scss */
+.bott {
+  clear: both;
+  padding: 1rem 0;
+}
+
+/* Text-Align */
+/* line 68, scss/base/_global-classes.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 72, scss/base/_global-classes.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 76, scss/base/_global-classes.scss */
+.align-left {
+  text-align: left;
+}
+
+/* Display Classes */
+@media all and (max-width: 500px) {
+  /* line 81, scss/base/_global-classes.scss */
+  .hide-small {
+    display: none;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 575px) {
+  /* line 87, scss/base/_global-classes.scss */
+  .hide-med {
+    display: none;
+  }
+}
+
+@media all and (min-width: 575px) {
+  /* line 93, scss/base/_global-classes.scss */
+  .hide-large {
+    display: none;
+  }
+}
+
+/* line 100, scss/base/_global-classes.scss */
+.valid {
+  color: #089e00;
+}
+
+/* line 104, scss/base/_global-classes.scss */
+.error {
+  color: #f00;
+}
+
+/* line 1, scss/base/_main.scss */
+body {
+  background: #fff;
+  font: 100%/1.4 Georgia, Cambria, "Times New Roman", Times, serif;
+  -webkit-text-size-adjust: 100%;
+  color: #38332c;
+  font-weight: normal;
+}
+
+/* Links */
+/* line 2, scss/base/_links.scss */
+a {
+  color: #38332c;
+  text-decoration: underline;
+  outline: 0;
+}
+/* line 7, scss/base/_links.scss */
+a.readmore {
+  color: #7b6e5b;
+}
+/* line 11, scss/base/_links.scss */
+a:hover, a:focus {
+  color: #844013;
+}
+
+/* line 16, scss/base/_links.scss */
+.footer .nav-social a {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  color: #38332c;
+  background: #f9f3e8;
+  overflow: hidden;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 29, scss/base/_links.scss */
+.footer .nav-social a span {
+  position: absolute;
+  top: -9999em;
+}
+/* line 33, scss/base/_links.scss */
+.footer .nav-social a:hover, .footer .nav-social a:focus {
+  background: #c49f5f;
+}
+
+/* line 38, scss/base/_links.scss */
+.footer .nav-social a i:before {
+  color: #38332c;
+  font-family: "godsendicons", "Arial", sans-serif;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: block;
+  line-height: 38px;
+  font-size: 16px;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/* line 61, scss/base/_links.scss */
+.footer .nav-social a i.icon-deviantart:before {
+  font-size: 1.85em;
+  line-height: 35px;
+}
+
+/* line 66, scss/base/_links.scss */
+.nav-social a:before {
+  margin: 0 1em 1em 0;
+  font-size: 38px;
+  line-height: 1;
+}
+
+/* line 73, scss/base/_links.scss */
+.nav-social li {
+  display: inline;
+  margin-left: 10px;
+}
+@media all and (max-width: 500px) {
+  /* line 73, scss/base/_links.scss */
+  .nav-social li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+/* Headings */
+/* line 3, scss/base/_headings.scss */
+h1, .alpha {
+  line-height: 1.2;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #38332c;
+  letter-spacing: .03em;
+  margin: 3rem 0 0;
+  border-bottom: 1px solid;
+  padding-bottom: 1.084em;
+  /*	@media all and (max-width: $bp-small) {
+  		width:100%;
+  		text-align:center;
+  		margin-left:0;
+  		padding-left:0;
+  		font-size: 2em;
+  	}
+  */
+}
+
+/* line 24, scss/base/_headings.scss */
+h2, .beta {
+  line-height: 1.11;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #38332c;
+  margin: 1.25em 0 .75em;
+}
+
+/* line 33, scss/base/_headings.scss */
+h3, .gamma {
+  line-height: 1.2;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: #38332c;
+}
+
+/* line 41, scss/base/_headings.scss */
+h4, .delta {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+  font-size: 1.125em;
+}
+
+/* Subheadings */
+/* line 55, scss/base/_headings.scss */
+.subheading {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #7b6e5b;
+}
+
+/* line 59, scss/base/_headings.scss */
+h5.subheading {
+  font-size: .9em;
+  line-height: 1;
+  margin-top: 0.2em;
+  font-weight: 100;
+}
+
+/* Text-Related Elements */
+/* line 2, scss/base/_text.scss */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Blockquote */
+/* line 7, scss/base/_text.scss */
+blockquote {
+  font-style: italic;
+  border-left: 1px solid #7b6e5b;
+  color: #f9f3e8;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal Rule */
+/* line 16, scss/base/_text.scss */
+hr {
+  border: 0;
+  height: 1px;
+  background: #7b6e5b;
+  margin: 2rem 0;
+}
+
+/* line 23, scss/base/_text.scss */
+abbr {
+  border-bottom: 1px dotted #7b6e5b;
+  cursor: help;
+}
+
+/* line 27, scss/base/_text.scss */
+strong {
+  font-weight: 500;
+}
+
+/* line 1, scss/base/_lists.scss */
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Definition Lists */
+/* line 8, scss/base/_lists.scss */
+dl {
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+
+/* line 13, scss/base/_lists.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 17, scss/base/_lists.scss */
+dd {
+  margin-left: 0;
+}
+
+/*------------------------------------*\
+    $MEDIA ELEMENTS
+\*------------------------------------*/
+/* Flexible Media */
+/* line 6, scss/base/_media.scss */
+img, video, object {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 12, scss/base/_media.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 18, scss/base/_media.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 22, scss/base/_media.scss */
+.alignright {
+  float: right;
+}
+
+/* line 26, scss/base/_media.scss */
+iframe {
+  margin-bottom: 1rem;
+}
+
+/* line 30, scss/base/_media.scss */
+figure {
+  margin-bottom: 1rem;
+}
+/* line 32, scss/base/_media.scss */
+figure img {
+  margin-bottom: 0.25rem;
+}
+
+/* line 36, scss/base/_media.scss */
+figcaption {
+  font-style: italic;
+}
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/* line 5, scss/base/_forms.scss */
+form > div {
+  margin-bottom: 1rem;
+}
+
+/* line 9, scss/base/_forms.scss */
+form ol, form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 14, scss/base/_forms.scss */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 20, scss/base/_forms.scss */
+label {
+  display: block;
+  padding-bottom: 0.25rem;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+  font-size: 0.8125em;
+  color: #7b6e5b;
+}
+
+/* line 28, scss/base/_forms.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 35, scss/base/_forms.scss */
+input, textarea {
+  border: 0;
+  padding: 5px;
+  background: #f5f3e9;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 44, scss/base/_forms.scss */
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+  -webkit-appearance: none;
+}
+
+/* line 48, scss/base/_forms.scss */
+button, input[type="submit"] {
+  padding: 0.65rem;
+  background: #7b6e5b;
+  border: 0;
+  cursor: pointer;
+  color: #f9f3e8;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+}
+/* line 56, scss/base/_forms.scss */
+button:hover, input[type="submit"]:hover {
+  background: #38332c;
+}
+
+/* line 61, scss/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+/* line 67, scss/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 72, scss/base/_forms.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 78, scss/base/_forms.scss */
+.field-container {
+  margin-bottom: 1rem;
+}
+
+/* line 82, scss/base/_forms.scss */
+.inline-form {
+  margin-top: 1rem;
+}
+/* line 86, scss/base/_forms.scss */
+.inline-form fieldset, .inline-form .inline-container {
+  position: relative;
+}
+/* line 90, scss/base/_forms.scss */
+.inline-form input {
+  height: 30px;
+  vertical-align: bottom;
+  width: 65%;
+  margin-right: 2%;
+  padding-left: 1em;
+  float: left;
+}
+/* line 99, scss/base/_forms.scss */
+.inline-form input[type=submit], .inline-form button, .inline-form .btn {
+  padding: 5px;
+  background: #7b6e5b;
+  width: auto;
+  height: 30px;
+  vertical-align: bottom;
+  color: #38332c;
+  width: 30%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 111, scss/base/_forms.scss */
+.inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
+  background: #844013;
+}
+
+/* line 118, scss/base/_forms.scss */
+.inline-search-results-form {
+  width: 100%;
+}
+@media all and (min-width: 500px) {
+  /* line 118, scss/base/_forms.scss */
+  .inline-search-results-form {
+    width: 82%;
+  }
+}
+/* line 125, scss/base/_forms.scss */
+.inline-search-results-form fieldset, .inline-search-results-form .inline-container {
+  position: relative;
+}
+/* line 129, scss/base/_forms.scss */
+.inline-search-results-form input[type=submit], .inline-search-results-form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: auto;
+}
+
+/* Validation */
+/* line 139, scss/base/_forms.scss */
+.has-error {
+  border-color: #f00;
+}
+
+/* line 142, scss/base/_forms.scss */
+.is-valid {
+  border-color: #089e00;
+}
+
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+/* Search Form */
+/* line 154, scss/base/_forms.scss */
+.search-field {
+  padding-right: 3em;
+}
+
+/* line 157, scss/base/_forms.scss */
+.inline-form .search-submit {
+  background: none;
+  padding: 0.78em 1em;
+  border: 0;
+  border-left: 1px solid #787878;
+  color: #787878;
+}
+
+/* line 165, scss/base/_forms.scss */
+#open-table {
+  width: 100%;
+}
+/* line 169, scss/base/_forms.scss */
+#open-table #OT_form, #open-table .OT_wrapper, #open-table .OT_list {
+  width: 100%;
+  height: auto;
+}
+/* line 174, scss/base/_forms.scss */
+#open-table .OT_header, #open-table .OT_title, #open-table .OT_subtitle {
+  width: auto;
+  float: none;
+}
+/* line 179, scss/base/_forms.scss */
+#open-table .OT_header {
+  border-bottom: 1px solid #38332c;
+  padding-bottom: 10px;
+}
+/* line 184, scss/base/_forms.scss */
+#open-table .OT_wrapper {
+  padding: 10px 0;
+  background-color: #f9f3e8;
+  border: 0;
+}
+/* line 190, scss/base/_forms.scss */
+#open-table .OT_list {
+  margin: 0;
+}
+/* line 194, scss/base/_forms.scss */
+#open-table .OT_day, #open-table .OT_time, #open-table .OT_party, #open-table .OT_submit {
+  padding: 10px 10px 9px 40px;
+  border: 0;
+  height: auto;
+  width: 48%;
+  margin-left: 6px;
+}
+/* line 201, scss/base/_forms.scss */
+#open-table .OT_searchTimeField, #open-table .OT_searchDateField, #open-table .OT_searchPartyField {
+  width: 100%;
+}
+/* line 204, scss/base/_forms.scss */
+#open-table .OT_time, #open-table .OT_submit {
+  float: right;
+}
+/* line 208, scss/base/_forms.scss */
+#open-table #OTButton {
+  float: right;
+}
+/* line 212, scss/base/_forms.scss */
+#open-table a.OT_Find_a_Table:link, #open-table a.OT_Find_a_Table:visited, #open-table a.OT_Find_a_Table:hover, #open-table a.OT_Find_a_Table:active {
+  background-image: none;
+  color: #FFFFFF;
+  background-color: #871F03;
+  border-radius: 7px;
+  padding-top: 2px;
+}
+/* line 220, scss/base/_forms.scss */
+#open-table a.OT_Find_a_Table:hover {
+  background-color: #591300;
+}
+/* line 224, scss/base/_forms.scss */
+#open-table .OT_ExtLink:link, #open-table .OT_ExtLink:visited, #open-table .OT_ExtLink:hover, #open-table .OT_ExtLink:active {
+  color: #7b6e5b;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  text-align: right;
+  display: block;
+  width: 100%;
+}
+
+/*------------------------------------*\
+    $Table
+\*------------------------------------*/
+/* line 4, scss/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+  width: 100%;
+}
+
+/* line 10, scss/base/_tables.scss */
+th {
+  text-align: left;
+  border: 1px solid #787878;
+  padding: 0.2em;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+  font-size: 0.75em;
+}
+
+/* line 17, scss/base/_tables.scss */
+td {
+  border: 0;
+  padding: 0.5em;
+}
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/* Layout Container */
+/* line 6, scss/objects/_layout.scss */
+.lc {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/* Grid Container */
+/* line 18, scss/objects/_layout.scss */
+.g {
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 0;
+  overflow: visible;
+  position: relative;
+}
+/* line 28, scss/objects/_layout.scss */
+.g > a {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .08em;
+  color: #f9f3e8;
+  font-size: 0.8125em;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Grid Item */
+/* line 39, scss/objects/_layout.scss */
+.gi {
+  padding: 0;
+  margin: 0 1% 2%;
+  position: relative;
+  float: left;
+}
+/* line 45, scss/objects/_layout.scss */
+.gi img {
+  display: block;
+}
+
+/* Grid 3up */
+/* line 55, scss/objects/_layout.scss */
+.g-3up > .gi {
+  width: 27%;
+}
+@media all and (min-width: 500px) {
+  /* line 60, scss/objects/_layout.scss */
+  .g-3up > .gi:nth-of-type(2n+1) {
+    clear: none;
+  }
+  /* line 64, scss/objects/_layout.scss */
+  .g-3up > .gi:nth-of-type(3n+1) {
+    clear: left;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 55, scss/objects/_layout.scss */
+  .g-3up > .gi {
+    width: 47%;
+    margin: 0 1.5% 3%;
+  }
+  /* line 74, scss/objects/_layout.scss */
+  .g-3up > .gi:nth-of-type(odd) {
+    clear: left;
+  }
+}
+/* line 83, scss/objects/_layout.scss */
+.g-3up > .gi.credits {
+  width: 42%;
+}
+@media all and (max-width: 500px) {
+  /* line 93, scss/objects/_layout.scss */
+  .g-3up > .gi, .g-3up > .gi.credits {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+/* line 1, scss/objects/_header.scss */
+.header {
+  padding: 0;
+  background: #7b6e5b;
+}
+/* line 5, scss/objects/_header.scss */
+.header.home {
+  background: #7b6e5b url("../images/starsheader.gif") repeat-x 50% 0;
+}
+/* line 9, scss/objects/_header.scss */
+.header .wrap.home {
+  height: 150px;
+}
+
+/* line 14, scss/objects/_header.scss */
+.logolink {
+  margin: 50px 0 0;
+  text-align: left;
+  display: block;
+}
+/* line 19, scss/objects/_header.scss */
+.logolink.small {
+  float: left;
+  margin: 0;
+}
+/* line 23, scss/objects/_header.scss */
+.logolink.small img {
+  height: 20px;
+  margin: 10px 0;
+  display: block;
+}
+
+/* line 31, scss/objects/_header.scss */
+.navwrap {
+  background: #38332c;
+  width: 100%;
+  height: 40px;
+}
+
+/* line 37, scss/objects/_header.scss */
+.ancmnts-tog {
+  text-align: right;
+}
+/* line 40, scss/objects/_header.scss */
+.ancmnts-tog .wrap {
+  height: 30px;
+}
+
+/* line 50, scss/objects/_header.scss */
+.open .ancmnts-tog .tog-closed {
+  display: none;
+}
+
+/* line 56, scss/objects/_header.scss */
+.closed .ancmnts-tog .tog-open {
+  display: none;
+}
+
+/* line 63, scss/objects/_header.scss */
+.ancmnts-tog {
+  position: relative;
+}
+/* line 67, scss/objects/_header.scss */
+.ancmnts-tog .tog-open {
+  background: #e8e2d4;
+}
+/* line 70, scss/objects/_header.scss */
+.ancmnts-tog .tog-open .icon-up {
+  text-align: center;
+  height: 30px;
+  cursor: pointer;
+}
+/* line 76, scss/objects/_header.scss */
+.ancmnts-tog .tog-open .icon-up:before {
+  line-height: 30px;
+  font-size: .875em;
+}
+/* line 81, scss/objects/_header.scss */
+.ancmnts-tog .tog-open .icon-font {
+  display: block;
+  position: absolute;
+  margin: 11px 0 0;
+  width: 100%;
+}
+/* line 88, scss/objects/_header.scss */
+.ancmnts-tog .tog-open .icon-font:before {
+  content: '\e807';
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+/* line 99, scss/objects/_header.scss */
+.ancmnts-tog .tog-closed {
+  background: transparent;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+/* line 109, scss/objects/_header.scss */
+.ancmnts-tog .tog-closed a {
+  display: inline-block;
+  margin: 0 auto;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: italic;
+  text-decoration: none;
+  font-size: .8125em;
+  letter-spacing: .03em;
+  height: 30px;
+  line-height: 30px;
+}
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+/* line 5, scss/objects/_nav.scss */
+.menu-top-menu-container {
+  margin: 0 auto;
+}
+
+/* line 10, scss/objects/_nav.scss */
+.nav {
+  text-align: right;
+  position: relative;
+  float: right;
+  margin-right: -1rem;
+  font-weight: 300;
+}
+@media all and (max-width: 500px) {
+  /* line 10, scss/objects/_nav.scss */
+  .nav {
+    display: none;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+/* line 29, scss/objects/_nav.scss */
+.nav ul {
+  z-index: 10;
+  position: relative;
+}
+/* line 35, scss/objects/_nav.scss */
+.nav li {
+  display: inline-block;
+  background: #38332c;
+  z-index: 10;
+  margin: 0;
+  position: relative;
+}
+/* line 42, scss/objects/_nav.scss */
+.nav li a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+}
+/* line 49, scss/objects/_nav.scss */
+.nav li.current-menu-item > a, .nav li.current-menu-ancestor > a {
+  color: #f9f3e8;
+}
+/* line 57, scss/objects/_nav.scss */
+.nav li.rss .text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+@media all and (max-width: 500px) {
+  /* line 35, scss/objects/_nav.scss */
+  .nav li {
+    display: block;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background: #7b6e5b;
+  }
+}
+/* line 75, scss/objects/_nav.scss */
+.nav a {
+  padding: 0 1rem;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.85em;
+  color: #f9f3e8;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+/* line 83, scss/objects/_nav.scss */
+.nav a:hover, .nav a:focus {
+  background: #7b6e5b;
+  color: #f9f3e8;
+}
+@media all and (max-width: 500px) {
+  /* line 83, scss/objects/_nav.scss */
+  .nav a:hover, .nav a:focus {
+    background: #c49f5f;
+    color: #38332c;
+  }
+}
+@media all and (max-width: 730px) {
+  /* line 75, scss/objects/_nav.scss */
+  .nav a {
+    padding: 0 10px;
+  }
+}
+@media all and (max-width: 575px) {
+  /* line 75, scss/objects/_nav.scss */
+  .nav a {
+    padding: 0 6.66667px;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 75, scss/objects/_nav.scss */
+  .nav a {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+}
+/* line 109, scss/objects/_nav.scss */
+.nav.active {
+  max-height: 40em;
+}
+
+/* line 114, scss/objects/_nav.scss */
+.nav-toggle {
+  display: block;
+  float: right;
+  width: 40px;
+  height: 40px;
+  color: #f9f3e8;
+  display: none;
+}
+/* line 122, scss/objects/_nav.scss */
+.nav-toggle .icon-menu:before {
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+}
+@media all and (max-width: 500px) {
+  /* line 114, scss/objects/_nav.scss */
+  .nav-toggle {
+    display: inline-block;
+  }
+}
+
+/* line 136, scss/objects/_nav.scss */
+.comic-nav {
+  clear: both;
+  padding: 0 35px;
+  margin: 20px 0 40px;
+  width: 100%;
+  font-weight: 400;
+  position: relative;
+}
+@media all and (max-width: 730px) {
+  /* line 136, scss/objects/_nav.scss */
+  .comic-nav {
+    padding: 0;
+    margin: 20px auto 40px;
+    width: 60%;
+  }
+}
+@media all and (max-width: 575px) {
+  /* line 136, scss/objects/_nav.scss */
+  .comic-nav {
+    width: 75%;
+  }
+}
+@media all and (max-width: 420px) {
+  /* line 136, scss/objects/_nav.scss */
+  .comic-nav {
+    width: 90%;
+  }
+}
+/* line 163, scss/objects/_nav.scss */
+.comic-nav .center {
+  /*
+  
+  NEED TO: display:block the center element then position abs the NEXT button back to top right corner
+  fix heights to auto vertical center txt
+  
+  */
+}
+@media all and (max-width: 730px) {
+  /* line 163, scss/objects/_nav.scss */
+  .comic-nav .center {
+    display: block;
+    width: 101%;
+    padding-top: 5px;
+    clear: both;
+  }
+}
+/* line 183, scss/objects/_nav.scss */
+.comic-nav div.li {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 20%;
+  text-align: center;
+  font-size: .875em;
+}
+/* line 193, scss/objects/_nav.scss */
+.comic-nav div.li.next, .comic-nav div.li.previous {
+  width: 26%;
+}
+@media all and (max-width: 730px) {
+  /* line 193, scss/objects/_nav.scss */
+  .comic-nav div.li.next, .comic-nav div.li.previous {
+    width: 50%;
+  }
+}
+@media all and (max-width: 730px) {
+  /* line 203, scss/objects/_nav.scss */
+  .comic-nav div.li.next {
+    display: block;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+/* line 216, scss/objects/_nav.scss */
+.comic-nav div.li.first, .comic-nav div.li.latest, .comic-nav div.li.chapters {
+  width: 16%;
+}
+@media all and (max-width: 730px) {
+  /* line 216, scss/objects/_nav.scss */
+  .comic-nav div.li.first, .comic-nav div.li.latest, .comic-nav div.li.chapters {
+    width: 33%;
+  }
+}
+/* line 224, scss/objects/_nav.scss */
+.comic-nav div.li .st0 {
+  fill: #958b79;
+}
+/* line 228, scss/objects/_nav.scss */
+.comic-nav div.li:hover .st0 {
+  fill: #38332c;
+}
+/* line 233, scss/objects/_nav.scss */
+.comic-nav div.li a, .comic-nav div.li span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 41px;
+  height: 100%;
+  text-decoration: none;
+}
+@media all and (max-width: 730px) {
+  /* line 233, scss/objects/_nav.scss */
+  .comic-nav div.li a, .comic-nav div.li span {
+    line-height: 48px;
+  }
+}
+@media all and (max-width: 575px) {
+  /* line 233, scss/objects/_nav.scss */
+  .comic-nav div.li a, .comic-nav div.li span {
+    line-height: 41px;
+  }
+}
+/* line 250, scss/objects/_nav.scss */
+.comic-nav div.li a:hover, .comic-nav div.li span:hover {
+  color: #f9f3e8;
+}
+/* line 257, scss/objects/_nav.scss */
+.comic-nav div.li.inactive .st0 {
+  fill: #958b79;
+}
+/* line 260, scss/objects/_nav.scss */
+.comic-nav div.li.inactive a, .comic-nav div.li.inactive span {
+  color: #7b6e5b;
+}
+
+/* line 269, scss/objects/_nav.scss */
+.pagination {
+  overflow: hidden;
+}
+/* line 272, scss/objects/_nav.scss */
+.pagination li {
+  float: left;
+  border-right: 1px solid #eee;
+}
+/* line 276, scss/objects/_nav.scss */
+.pagination li:last-child {
+  border: 0;
+}
+/* line 281, scss/objects/_nav.scss */
+.pagination a {
+  padding: 20px;
+}
+
+/*------------------------------------*\
+    $MAIN CONTENT AREA
+\*------------------------------------*/
+/* line 4, scss/objects/_main.scss */
+[role=main] {
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+}
+@media all and (max-width: 575px) {
+  /* line 4, scss/objects/_main.scss */
+  [role=main] {
+    padding: 0;
+  }
+}
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/* line 4, scss/objects/_footer.scss */
+.footer {
+  clear: both;
+  overflow: hidden;
+  color: #f2ebdd;
+  line-height: 1.5;
+  text-align: left;
+  margin: 2rem auto 0;
+  width: 100%;
+  background: #38332c;
+  padding: 40px 0 0;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+/* line 18, scss/objects/_footer.scss */
+.footer .nav-foot a {
+  line-height: 30px;
+  height: 30px;
+  width: 100%;
+  display: block;
+}
+/* line 27, scss/objects/_footer.scss */
+.footer .lc {
+  padding: 1rem 1rem 0;
+}
+/* line 32, scss/objects/_footer.scss */
+.footer a {
+  color: #f9f3e8;
+  text-decoration: none;
+}
+/* line 35, scss/objects/_footer.scss */
+.footer a:hover {
+  color: #c49f5f;
+}
+/* line 41, scss/objects/_footer.scss */
+.footer .nav-social {
+  padding: 0 0 12px;
+}
+/* line 45, scss/objects/_footer.scss */
+.footer .credits {
+  font-size: .75em;
+  clear: both;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: right;
+}
+/* line 52, scss/objects/_footer.scss */
+.footer .credits p {
+  margin-bottom: 13px;
+}
+@media all and (max-width: 500px) {
+  /* line 45, scss/objects/_footer.scss */
+  .footer .credits {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+/*------------------------------------*\
+    $TEXT Styles
+\*------------------------------------*/
+/* Global Font Classes */
+/* line 2, scss/objects/_text.scss */
+.font-secondary {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* line 5, scss/objects/_text.scss */
+.font-tertiary {
+  font-family: Arial, sans-serif;
+}
+
+/* line 11, scss/objects/_text.scss */
+.text {
+  padding: 20px;
+}
+@media all and (min-width: 420px) {
+  /* line 11, scss/objects/_text.scss */
+  .text {
+    padding: 40px;
+  }
+}
+@media all and (min-width: 575px) {
+  /* line 11, scss/objects/_text.scss */
+  .text {
+    padding: 9% 10% 7%;
+  }
+}
+/* line 22, scss/objects/_text.scss */
+.text h1 {
+  margin-top: 0;
+}
+/* line 26, scss/objects/_text.scss */
+.text ul {
+  list-style: disc;
+  margin: 0 0 1rem 1.2em;
+}
+/* line 30, scss/objects/_text.scss */
+.text ul ul {
+  margin-bottom: 0;
+}
+/* line 35, scss/objects/_text.scss */
+.text ol {
+  list-style: decimal;
+  margin: 0 0 1rem 1.2em;
+}
+/* line 39, scss/objects/_text.scss */
+.text ol ol {
+  margin-bottom: 0;
+}
+/* line 43, scss/objects/_text.scss */
+.text p {
+  font-size: .9375em;
+  line-height: 1.47;
+  margin-bottom: .934em;
+}
+/* line 48, scss/objects/_text.scss */
+.text strong img {
+  width: 700px;
+  margin-left: -70px;
+  max-width: 700px;
+}
+@media all and (max-width: 730px) {
+  /* line 48, scss/objects/_text.scss */
+  .text strong img {
+    width: auto;
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+/* line 1, scss/objects/_blocks.scss */
+.menu-section {
+  margin: 20px 0;
+}
+/* line 5, scss/objects/_blocks.scss */
+.menu-section section {
+  clear: both;
+}
+/* line 11, scss/objects/_blocks.scss */
+.menu-section .menu-item {
+  margin-bottom: 20px;
+}
+/* line 15, scss/objects/_blocks.scss */
+.menu-section .item-title {
+  width: 28%;
+  float: left;
+  margin: 0 2% 0 0;
+  text-align: right;
+}
+/* line 21, scss/objects/_blocks.scss */
+.menu-section .item-title h3 {
+  line-height: 20px;
+  margin: 0;
+}
+/* line 26, scss/objects/_blocks.scss */
+.menu-section .item-title h5.subheading {
+  line-height: 20px;
+  color: #f9f3e8;
+  margin: 0;
+}
+@media all and (max-width: 420px) {
+  /* line 15, scss/objects/_blocks.scss */
+  .menu-section .item-title {
+    width: 100%;
+    text-align: left;
+    float: none;
+  }
+  /* line 38, scss/objects/_blocks.scss */
+  .menu-section .item-title h3 {
+    float: left;
+  }
+  /* line 42, scss/objects/_blocks.scss */
+  .menu-section .item-title h5.subheading {
+    float: right;
+  }
+}
+/* line 50, scss/objects/_blocks.scss */
+.menu-section .item-desc {
+  float: left;
+  width: 70%;
+  margin-top: .4em;
+  font-size: 0.875em;
+  line-height: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+@media all and (max-width: 420px) {
+  /* line 50, scss/objects/_blocks.scss */
+  .menu-section .item-desc {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    float: none;
+  }
+}
+
+/* line 73, scss/objects/_blocks.scss */
+#lightbox #outerImageContainer,
+#lightbox #imageDataContainer {
+  background: #302D2F;
+}
+/* line 78, scss/objects/_blocks.scss */
+#lightbox #jqlb_closelabel {
+  background-image: none;
+  text-align: right;
+}
+/* line 82, scss/objects/_blocks.scss */
+#lightbox #jqlb_closelabel:after {
+  content: "X";
+  font-size: 1.4em;
+}
+
+/* line 2, scss/objects/_lists.scss */
+.inline-list li {
+  display: inline-block;
+}
+
+/* line 1, scss/objects/_tabs.scss */
+.tabs {
+  overflow: hidden;
+}
+/* line 4, scss/objects/_tabs.scss */
+.tabs ul {
+  display: table;
+  width: 100%;
+}
+/* line 9, scss/objects/_tabs.scss */
+.tabs li {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #7b6e5b;
+}
+/* line 14, scss/objects/_tabs.scss */
+.tabs li:last-child {
+  border-right: 0;
+}
+/* line 19, scss/objects/_tabs.scss */
+.tabs a {
+  display: block;
+  padding: 0.5rem;
+  background: #787878;
+}
+/* line 24, scss/objects/_tabs.scss */
+.tabs a:hover, .tabs a:focus {
+  background: #7b6e5b;
+}
+/* line 28, scss/objects/_tabs.scss */
+.tabs a.active {
+  background: #333;
+  color: #fff;
+}
+
+/* line 2, scss/objects/_article.scss */
+.menu-group {
+  margin: 4rem 0;
+}
+/* line 5, scss/objects/_article.scss */
+.menu-group .intro {
+  font-size: 0.875em;
+  color: #7b6e5b;
+  margin: 20px 0 20px 28%;
+  padding-left: 2%;
+}
+@media all and (max-width: 420px) {
+  /* line 5, scss/objects/_article.scss */
+  .menu-group .intro {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+/* line 20, scss/objects/_article.scss */
+.ancmnts {
+  font-weight: normal;
+  background: #f9f3e8;
+  margin-bottom: 30px;
+}
+/* line 26, scss/objects/_article.scss */
+.ancmnts .post {
+  margin: 40px 0;
+}
+/* line 31, scss/objects/_article.scss */
+.ancmnts.closed .post {
+  display: none;
+}
+/* line 36, scss/objects/_article.scss */
+.ancmnts .article-header {
+  float: left;
+  width: 33%;
+  text-align: right;
+  padding-right: 40px;
+}
+@media all and (max-width: 730px) {
+  /* line 36, scss/objects/_article.scss */
+  .ancmnts .article-header {
+    width: 40%;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 36, scss/objects/_article.scss */
+  .ancmnts .article-header {
+    width: 45%;
+  }
+}
+/* line 50, scss/objects/_article.scss */
+.ancmnts .article-header h1, .ancmnts .article-header p {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 0px;
+  border: 0;
+  line-height: 1.3;
+}
+/* line 62, scss/objects/_article.scss */
+.ancmnts .article-header p {
+  padding-top: 8px;
+  margin-bottom: 1rem;
+}
+/* line 69, scss/objects/_article.scss */
+.ancmnts .pcont {
+  width: 66%;
+  float: right;
+  padding-top: 1px;
+}
+@media all and (max-width: 730px) {
+  /* line 69, scss/objects/_article.scss */
+  .ancmnts .pcont {
+    width: 60%;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 69, scss/objects/_article.scss */
+  .ancmnts .pcont {
+    width: 55%;
+  }
+}
+/* line 81, scss/objects/_article.scss */
+.ancmnts .pcont p {
+  font-size: 0.875em;
+  line-height: 1.4286;
+}
+/* line 87, scss/objects/_article.scss */
+.ancmnts .readall {
+  font-style: italic;
+  text-align: right;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 93, scss/objects/_article.scss */
+.ancmnts .readall a {
+  text-decoration: none;
+}
+
+/* line 99, scss/objects/_article.scss */
+.ancmnts.page {
+  background: #fff;
+}
+/* line 102, scss/objects/_article.scss */
+.ancmnts.page .post {
+  margin: 3rem 0 5rem;
+}
+/* line 106, scss/objects/_article.scss */
+.ancmnts.page nav {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 1px solid;
+  padding-top: .6em;
+}
+/* line 113, scss/objects/_article.scss */
+.ancmnts.page nav a {
+  text-decoration: none;
+}
+
+/* line 121, scss/objects/_article.scss */
+.comic .article-header {
+  padding: 0 35px;
+}
+/* line 124, scss/objects/_article.scss */
+.comic .article-header h1, .comic .article-header p {
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: .8125em;
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 0;
+  border: 0;
+}
+/* line 134, scss/objects/_article.scss */
+.comic .article-header p {
+  float: left;
+  line-height: 1.2;
+}
+@media all and (max-width: 730px) {
+  /* line 134, scss/objects/_article.scss */
+  .comic .article-header p {
+    width: 100%;
+    text-align: right;
+    margin-bottom: .3em;
+  }
+}
+/* line 146, scss/objects/_article.scss */
+.comic .article-header h1 {
+  float: right;
+}
+@media all and (max-width: 730px) {
+  /* line 121, scss/objects/_article.scss */
+  .comic .article-header {
+    padding: 0 5%;
+  }
+}
+/* line 157, scss/objects/_article.scss */
+.comic .pcont {
+  clear: both;
+  padding: 0 95px;
+  width: 630px;
+  margin: 0 35px;
+}
+@media all and (max-width: 730px) {
+  /* line 157, scss/objects/_article.scss */
+  .comic .pcont {
+    padding: 0 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+/* line 171, scss/objects/_article.scss */
+.comic .pcont p {
+  font-size: .9375em;
+}
+
+/* line 179, scss/objects/_article.scss */
+.chapters.page .title-card {
+  width: 100%;
+  text-align: center;
+}
+/* line 183, scss/objects/_article.scss */
+.chapters.page .title-card img {
+  width: 300px;
+  height: auto;
+  margin: 2rem 0 0;
+}
+/* line 189, scss/objects/_article.scss */
+.chapters.page .title-card h2 {
+  margin: .25em 0;
+  padding: 0;
+}
+/* line 194, scss/objects/_article.scss */
+.chapters.page .title-card a {
+  text-decoration: none;
+}
+/* line 197, scss/objects/_article.scss */
+.chapters.page .title-card p {
+  font-style: italic;
+}
+/* line 202, scss/objects/_article.scss */
+.chapters.page .chapter-list {
+  -webkit-columns: 100px 3;
+  -moz-columns: 100px 3;
+  columns: 100px 3;
+  font-size: .9375em;
+  line-height: 1.75;
+  border-bottom: 1px solid;
+  padding: 0 0 2.5rem;
+  margin: 0 0 1rem;
+}
+@media all and (max-width: 575px) {
+  /* line 202, scss/objects/_article.scss */
+  .chapters.page .chapter-list {
+    -webkit-columns: 100px 2;
+    -moz-columns: 100px 2;
+    columns: 100px 2;
+  }
+}
+/* line 220, scss/objects/_article.scss */
+.chapters.page .chapter-list:last-of-type {
+  border: 0;
+}
+/* line 224, scss/objects/_article.scss */
+.chapters.page .chapter-list span {
+  display: inline-block;
+  width: 58%;
+}
+/* line 228, scss/objects/_article.scss */
+.chapters.page .chapter-list span:first-of-type {
+  width: 35%;
+  text-transform: lowercase;
+}
+/* line 234, scss/objects/_article.scss */
+.chapters.page .chapter-list a {
+  text-decoration: none;
+}
+/* line 237, scss/objects/_article.scss */
+.chapters.page .chapter-list a:visited {
+  color: #958b79;
+}
+
+/* Wordpress Caption */
+/* line 247, scss/objects/_article.scss */
+.wp-caption-text {
+  font-style: italic;
+}
+
+/**
+ * 6.14 Comments
+ * -----------------------------------------------------------------------------
+ */
+/* line 6, scss/objects/_comments.scss */
+.comments-area {
+  margin: 3.5rem auto 0;
+  max-width: 100%;
+  padding: 0 35px;
+  font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* line 12, scss/objects/_comments.scss */
+.comments-area > div, .comments-area > ol, .comments-area > p {
+  padding-left: 95px;
+  padding-right: 95px;
+}
+@media all and (max-width: 730px) {
+  /* line 12, scss/objects/_comments.scss */
+  .comments-area > div, .comments-area > ol, .comments-area > p {
+    padding: 0 5%;
+  }
+}
+@media all and (max-width: 575px) {
+  /* line 12, scss/objects/_comments.scss */
+  .comments-area > div, .comments-area > ol, .comments-area > p {
+    padding: 0;
+  }
+}
+
+/* line 27, scss/objects/_comments.scss */
+.comment-list, .comment-respond, .comments-area > p {
+  display: none;
+}
+
+/* line 31, scss/objects/_comments.scss */
+.comment-reply-title,
+.comments-title {
+  font: 400 16px/1.5 Lato, sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 38, scss/objects/_comments.scss */
+.comment-reply-title.border,
+.comments-title.border {
+  border-top: 1px solid;
+  padding-top: .5em;
+}
+
+/* line 44, scss/objects/_comments.scss */
+.comment-list {
+  list-style: none;
+  margin: 0 0 48px 0;
+}
+
+/* line 49, scss/objects/_comments.scss */
+.comment-author {
+  font-size: 14px;
+  line-height: 1.7142857142;
+}
+
+/* line 54, scss/objects/_comments.scss */
+.comment-list .reply,
+.comment-metadata {
+  font-size: 12px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+/* line 61, scss/objects/_comments.scss */
+.comment-list .reply {
+  margin-top: 24px;
+}
+
+/* line 65, scss/objects/_comments.scss */
+.comment-author .fn {
+  font-weight: 700;
+}
+
+/* line 69, scss/objects/_comments.scss */
+.comment-author a {
+  color: #2b2b2b;
+}
+
+/* line 73, scss/objects/_comments.scss */
+.comment-list .trackback a,
+.comment-list .pingback a,
+.comment-metadata a {
+  color: #767676;
+}
+
+/* line 79, scss/objects/_comments.scss */
+.comment-author a:hover,
+.comment-list .pingback a:hover,
+.comment-list .trackback a:hover,
+.comment-metadata a:hover {
+  color: #41a62a;
+}
+
+/* line 86, scss/objects/_comments.scss */
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding-top: 24px;
+}
+
+/* line 94, scss/objects/_comments.scss */
+.comment-list > li:first-child > article,
+.comment-list > .pingback:first-child,
+.comment-list > .trackback:first-child {
+  border-top: 0;
+}
+
+/* line 100, scss/objects/_comments.scss */
+.comment-author {
+  position: relative;
+}
+
+/* line 104, scss/objects/_comments.scss */
+.comment-author .avatar {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 30px;
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+
+/* line 114, scss/objects/_comments.scss */
+.bypostauthor > article .fn:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e80d";
+  margin: 0 2px 0 -2px;
+  position: relative;
+  top: -1px;
+}
+
+/* line 122, scss/objects/_comments.scss */
+.says {
+  display: none;
+}
+
+/* line 126, scss/objects/_comments.scss */
+.comment-author,
+.comment-awaiting-moderation,
+.comment-content,
+.comment-list .reply,
+.comment-metadata {
+  padding-left: 40px;
+  font-size: .875em;
+}
+
+/* line 135, scss/objects/_comments.scss */
+.comment-edit-link {
+  margin-left: 10px;
+}
+
+/* line 139, scss/objects/_comments.scss */
+.comment-edit-link:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e80f";
+  margin-right: 2px;
+  text-decoration: none;
+}
+
+/* line 146, scss/objects/_comments.scss */
+.comment-reply-link:before,
+.comment-reply-login:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e810";
+  margin-right: 2px;
+  text-decoration: none;
+}
+
+/* line 154, scss/objects/_comments.scss */
+.comment-content {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* line 162, scss/objects/_comments.scss */
+.comment-content ul,
+.comment-content ol {
+  margin: 0 0 24px 22px;
+}
+
+/* line 167, scss/objects/_comments.scss */
+.comment-content li > ul,
+.comment-content li > ol {
+  margin-bottom: 0;
+}
+
+/* line 172, scss/objects/_comments.scss */
+.comment-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 176, scss/objects/_comments.scss */
+.comment-list .children {
+  list-style: none;
+  margin-left: 15px;
+}
+
+/* line 181, scss/objects/_comments.scss */
+.comment-respond {
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+/* line 186, scss/objects/_comments.scss */
+.comment .comment-respond {
+  margin-top: 24px;
+}
+
+/* line 190, scss/objects/_comments.scss */
+.comment-respond h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* line 195, scss/objects/_comments.scss */
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.no-comments,
+.form-allowed-tags,
+.form-allowed-tags code {
+  color: #767676;
+}
+
+/* line 204, scss/objects/_comments.scss */
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as {
+  font-size: 14px;
+  line-height: 1.7142857142;
+}
+
+/* line 211, scss/objects/_comments.scss */
+.no-comments {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+
+/* line 219, scss/objects/_comments.scss */
+.comment-form label {
+  display: block;
+}
+
+/* line 223, scss/objects/_comments.scss */
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+  width: 100%;
+}
+
+/* line 229, scss/objects/_comments.scss */
+.form-allowed-tags,
+.form-allowed-tags code {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* line 235, scss/objects/_comments.scss */
+.required {
+  color: #c0392b;
+}
+
+/* line 239, scss/objects/_comments.scss */
+.comment-reply-title small a {
+  color: #2b2b2b;
+  float: right;
+  height: 24px;
+  overflow: hidden;
+  width: 24px;
+}
+
+/* line 247, scss/objects/_comments.scss */
+.comment-reply-title small a:hover {
+  color: #41a62a;
+}
+
+/* line 251, scss/objects/_comments.scss */
+.comment-reply-title small a:before {
+  font-family: "godsendicons", "Arial", sans-serif;
+  content: "\e80e";
+  font-size: 32px;
+}
+
+/* line 257, scss/objects/_comments.scss */
+.comment-navigation {
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+/* line 264, scss/objects/_comments.scss */
+.comment-navigation .nav-next,
+.comment-navigation .nav-previous {
+  display: inline-block;
+}
+
+/* line 269, scss/objects/_comments.scss */
+.comment-navigation .nav-previous a {
+  margin-right: 10px;
+}
+
+/* line 273, scss/objects/_comments.scss */
+#comment-nav-above {
+  margin-top: 36px;
+  margin-bottom: 0;
+}

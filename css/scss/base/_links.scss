@@ -1,0 +1,81 @@
+/* Links */ 
+a {
+	color: $drk-brwn;
+	text-decoration: underline;
+	outline: 0;
+
+	&.readmore {
+		color:$med-brwn;
+	}
+	
+	&:hover, &:focus {
+		color: $red;
+	}
+}
+
+.footer .nav-social a {
+
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	color: $drk-brwn;
+	background:$creme;
+	overflow:hidden;
+	position:relative;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	span{
+		position:absolute;
+		top:-9999em;
+	}
+	&:hover, &:focus {
+		background: $gold;
+	}
+}
+
+.footer .nav-social a i:before {
+	color: $drk-brwn;
+	font-family:$font-icons;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	display: block;
+	line-height: 38px;
+	font-size: 16px;
+
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+	
+}
+
+.footer .nav-social a i.icon-deviantart:before {
+	font-size: 1.85em;
+	line-height: 35px;
+}
+
+.nav-social a:before {
+    margin: 0 1em 1em 0;
+	font-size:38px;
+	line-height:1;
+
+}
+
+.nav-social li {
+	display: inline;
+	margin-left: $padpx-half;
+
+	@media all and (max-width: $bp-med) {
+		margin-left: $padpx-half/2;
+		margin-right: $padpx-half/2;
+	}
+}

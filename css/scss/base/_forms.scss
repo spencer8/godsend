@@ -1,0 +1,232 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+form > div {
+	margin-bottom: $space;
+}
+
+form ol, form ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+label {
+	display: block;
+	padding-bottom: $space-quarter;
+	@include font-2-style();
+	font-size: $font-size-sm;
+	color:$med-brwn;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 1em;
+    margin: 0;
+    width:100%;
+}
+
+input, textarea {
+	border: 0;
+	padding: $padpx/4;
+	background: $creme-light;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+	-webkit-appearance: none;
+}
+
+button, input[type="submit"] {
+	padding: 0.65rem;
+	background: $med-brwn;
+	border: 0;
+	cursor: pointer;
+	color: $creme;
+	@include font-2-style();
+
+	&:hover {
+		background: $drk-brwn;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.3em;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+//Form Field Container
+.field-container {
+	margin-bottom: $space;
+}
+
+.inline-form {
+	
+	margin-top:$space;
+
+	fieldset, .inline-container {
+		position: relative;
+	}
+
+	input {
+		height: 30px; 
+		vertical-align: bottom;	
+		width:65%;
+		margin-right:2%;
+		padding-left: 1em;
+		float: left;
+	}
+	
+	input[type=submit], button, .btn {
+		padding: $padpx-half/2;
+		background: $med-brwn;
+		width: auto;
+		height: 30px;
+		vertical-align: bottom;
+		color: $drk-brwn;
+		width:30%;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+		&:hover, &:focus {
+			background: $red;
+		}
+	}
+}
+
+// PK to clean this up
+.inline-search-results-form {
+	width: 100%;
+	@media all and (min-width: $bp-med) {
+		width: 82%;
+
+	} 
+	
+	fieldset, .inline-container {
+		position: relative;
+	}
+	
+	input[type=submit], button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		width: auto;
+	}
+}
+
+/* Validation */
+.has-error {
+	border-color: $error;
+}
+.is-valid {
+	border-color: $valid;
+}
+
+
+
+
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+
+/* Search Form */
+.search-field {
+	padding-right: 3em;
+}
+.inline-form .search-submit {
+	background: none;
+	padding: 0.78em 1em;
+	border: 0;
+	border-left: 1px solid $gray;
+	color: $gray;
+}
+
+#open-table {
+
+	width: 100%;
+
+	#OT_form, .OT_wrapper, .OT_list {
+		width: 100%;
+		height:auto;
+	}
+
+	.OT_header, .OT_title, .OT_subtitle {
+		width: auto;
+		float:none;
+	}
+	
+	.OT_header {
+		border-bottom:1px solid $drk-brwn;
+		padding-bottom:10px;
+	}
+
+	.OT_wrapper {
+		padding:10px 0;
+		background-color:$creme;
+		border:0;
+	}
+
+	.OT_list {
+		margin:0; 
+	}
+
+	.OT_day, .OT_time, .OT_party, .OT_submit {
+		padding: 10px 10px 9px 40px;
+		border: 0;
+		height:auto;
+		width: 48%;
+		margin-left: 6px;
+	}
+	.OT_searchTimeField, .OT_searchDateField, .OT_searchPartyField {
+		width:100%;
+	}
+	.OT_time, .OT_submit {
+		float:right;
+	}
+
+	#OTButton {
+		float:right;
+	}
+
+	a.OT_Find_a_Table:link, a.OT_Find_a_Table:visited, a.OT_Find_a_Table:hover, a.OT_Find_a_Table:active {
+		background-image: none;
+		color: #FFFFFF;
+		background-color:#871F03;
+		border-radius: 7px;
+		padding-top: 2px;
+	}
+
+	a.OT_Find_a_Table:hover {
+		background-color:#591300;
+	}
+
+	.OT_ExtLink:link, .OT_ExtLink:visited, .OT_ExtLink:hover, .OT_ExtLink:active {
+		color: $med-brwn;
+		font-family: $font;
+		text-align: right;
+		display: block;
+		width: 100%;
+	}
+
+}

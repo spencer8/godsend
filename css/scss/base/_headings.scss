@@ -1,0 +1,64 @@
+/* Headings */
+
+h1, .alpha   { 
+	line-height: 1.2;
+	font-family: $font-secondary;
+	font-weight: 700;
+	font-size: 1.5em;
+	color: $drk-brwn;
+	letter-spacing: .03em;
+	margin: $space*3 0 0;
+	border-bottom: 1px solid;
+	padding-bottom: 1.084em;
+
+/*	@media all and (max-width: $bp-small) {
+		width:100%;
+		text-align:center;
+		margin-left:0;
+		padding-left:0;
+		font-size: 2em;
+	}
+*/
+}
+
+h2, .beta    { 
+	line-height: 1.11;
+	font-family: $font-secondary;
+	font-weight: 700;
+	font-size: 1.125em;
+	color: $drk-brwn;
+	margin:1.25em 0 .75em;
+}
+
+h3, .gamma   { 
+	line-height: 1.2;
+	font-family: $font-secondary;
+	font-size: 1em;
+	font-weight: 700;
+	color: $drk-brwn;
+}
+
+h4, .delta   {
+	@include font-2-style();
+	font-size: 1.125em;
+}
+
+h5, .epsilon { 
+	
+}
+
+h6, .zeta    { 
+	
+}
+
+/* Subheadings */
+.subheading {
+	font-family: $font;
+	color: $med-brwn;
+}
+h5.subheading {
+	font-size: .9em;
+	line-height: 1;
+	margin-top: 0.2em;
+	font-weight: 100;
+}

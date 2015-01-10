@@ -1,0 +1,29 @@
+/* Text-Related Elements */ 
+p {
+	margin-bottom: $space;
+}
+
+/* Blockquote */
+blockquote {
+    font-style:italic;
+    border-left: 1px solid $med-brwn;
+    color: $creme;
+	padding-left: $pad;
+	margin-bottom: $space;
+}
+
+/* Horizontal Rule */ 
+hr {
+	border: 0;
+    height: 1px;
+    background: $med-brwn;
+    margin: $space-double 0;
+}
+
+abbr {
+    border-bottom: 1px dotted $med-brwn;
+    cursor: help;
+}
+strong {
+    font-weight: 500;
+}

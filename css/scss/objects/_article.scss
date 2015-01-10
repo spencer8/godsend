@@ -1,0 +1,249 @@
+//Article
+.menu-group {
+	margin: $space*4 0;
+
+	.intro{
+		font-size:$font-size-norm;
+		color:$med-brwn;
+		margin:$padpx 0 $padpx $menu-col-left;
+		padding-left:$menu-col-gutter;
+
+		@media all and (max-width: $bp-small) {
+
+			margin-left:0;
+			padding-left:0;
+
+		}
+
+	}
+}
+.ancmnts {
+	font-weight:normal;
+	background:$creme;
+	margin-bottom:30px;
+
+
+	.post {
+		margin: $padpx-double 0;
+	}
+
+	&.closed {
+		.post {
+			display:none;
+		}
+	}
+
+	.article-header {
+		float:left;
+		width:33%;
+		text-align:right;
+		padding-right:$padpx-double;
+
+		@media all and (max-width: $bp-full) {
+	        width:40%;
+	        padding-right:$padpx;
+	    }
+		@media all and (max-width: $bp-med) {
+	        width:45%;
+	    }
+
+		h1, p {
+
+			font-family:$font-secondary;
+			font-size: 1em;
+			font-weight: normal;
+			margin:0;
+			padding-bottom:0px;
+			border:0;
+			line-height: 1.3;
+
+		}
+
+		p{
+			padding-top:8px;
+			margin-bottom:1rem;
+		}
+
+	}
+
+	.pcont {
+		width:66%;
+		float:right;
+		padding-top: 1px;
+
+		@media all and (max-width: $bp-full) {
+	        width:60%;
+	    }
+		@media all and (max-width: $bp-med) {
+	        width:55%;
+	    }
+
+		p {
+			font-size:0.875em;
+			line-height: 1.4286;
+		}
+	}
+
+	.readall {
+
+		font-style:italic;
+		text-align:right;
+		font-family: $font-secondary;
+
+		a {
+			text-decoration:none;
+		}
+	}
+
+}
+.ancmnts.page{
+	background:$white;
+
+	.post{
+		margin: 3rem 0 5rem;
+	}
+
+	nav {
+		font-family:$font-secondary;
+		text-align:center;
+		text-transform:uppercase;
+		border-top: 1px solid;
+		padding-top: .6em;
+
+		a {
+			text-decoration:none;
+		}
+	}
+}
+
+.comic {
+	
+	.article-header {
+		padding: 0 35px;
+
+		h1, p {
+
+			font-family:$font-secondary;
+			font-size: .8125em;
+			font-weight: normal;
+			margin:0;
+			padding-bottom:0;
+			border:0;
+
+		}
+		p { 
+			float:left;
+			line-height:1.2;
+			
+			@media all and (max-width: $bp-full) {
+				width: 100%;
+				text-align: right;
+				margin-bottom: .3em;
+			}
+
+		}
+
+		h1 { 
+			float:right; 
+		}
+
+		@media all and (max-width: $bp-full) {
+	        padding: 0 5%;
+	    }
+
+	}
+
+
+	.pcont{
+		clear:both;
+		padding: 0 95px;
+		width: 630px;
+		margin: 0 35px;
+
+		@media all and (max-width: $bp-full) {
+    		padding: 0 5%;
+    		width: 90%;
+    		margin-left:5%;
+    		margin-right:5%;
+	    }
+
+
+		p {
+			font-size: .9375em;
+		}
+	}
+
+}
+.chapters.page {
+
+	.title-card {
+		width:100%;
+		text-align:center;
+		
+		img {
+			width:300px;
+			height:auto;
+			margin: 2rem 0 0;
+		}
+
+		h2 {
+			margin: .25em 0;
+			padding:0;
+		}
+
+		a {
+			text-decoration:none;
+		}
+		p {
+			font-style:italic;
+		}
+	}
+	
+	.chapter-list {
+
+		-webkit-columns: 100px 3;
+		-moz-columns: 100px 3;
+		columns: 100px 3;
+		font-size:.9375em;
+		line-height:1.75;
+
+		border-bottom:1px solid;
+		padding: 0 0 2.5rem;
+		margin: 0 0 1rem;
+
+		@media all and (max-width: $bp-large) {
+    		-webkit-columns: 100px 2;
+			-moz-columns: 100px 2;
+			columns: 100px 2;
+	    }
+
+		&:last-of-type {
+			border:0;
+		}
+
+		span {
+		 display:inline-block;
+		 width:58%;
+
+		 &:first-of-type {
+		 	width:35%;
+		 	text-transform:lowercase;
+		 }
+		}
+
+		a {
+			text-decoration:none;
+
+			&:visited{
+				color:$med-brwn-lt;
+			}
+		}
+
+	}
+
+}
+
+/* Wordpress Caption */
+.wp-caption-text {
+	font-style: italic;
+}

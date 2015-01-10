@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    $GLOBAL CLASSES
+\*------------------------------------*/
+
+/* Clearfix */
+.cf, .wrap {
+    *zoom: 1;
+}
+.cf:before, .cf:after,
+.wrap:before, .wrap:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after, .wrap:after {
+    clear: both;
+}
+
+.wrap {
+    width: $max-width;
+    margin:0 auto;
+    position: relative;
+
+    @media all and (max-width: $bp-full) {
+        width: 100%;
+        padding: 0 3%;
+    }
+}
+
+/* Completely remove from the flow and screen readers. */
+.is-hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+.is-vishidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Floats */
+.right {
+	float: right;
+	padding: 0 0 $pad $pad;
+}
+
+.right-search {
+	float: right;
+	padding: 0 0 $pad 0;
+}
+
+.left {
+	float: left;
+	padding: 0 $pad $pad 0;
+}
+
+.bott {
+    clear: both;
+    padding: $pad 0;
+}
+/* Text-Align */
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-left {
+	text-align: left;
+}
+
+/* Display Classes */
+.hide-small {
+    @media all and (max-width: $bp-med) {
+        display: none;
+    }
+}
+
+.hide-med {
+    @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+        display: none;
+    }
+}
+
+.hide-large {
+    @media all and (min-width: $bp-large) {
+        display: none;
+    }
+}
+
+//
+.valid {
+	color: $valid;
+}
+
+.error {
+	color: $error;
+}
+
+.info {
+
+}
+
+
