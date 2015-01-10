@@ -1,5 +1,5 @@
-trg-2014-theme
-=============
+godesend
+========
 
 WordPress theme for godsend.shatterlands.com
 
