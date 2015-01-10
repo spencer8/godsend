@@ -1,5 +1,5 @@
-godesend
-========
+godsend
+=======
 
 WordPress theme for godsend.shatterlands.com
 
