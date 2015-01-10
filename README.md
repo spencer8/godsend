@@ -1,12 +1,15 @@
 trg-2014-theme
 =============
 
-WordPress theme for theroguegentlemen.com
+WordPress theme for godsend.shatterlands.com
 
 ## Dependencies:
 
-- ACF plugin
-	- ACF repeatable
-	- ACF flexible content
-	- and some specific fields
+WordPress
+
+## Recommended:
+
+Plugins:
+- Jetpack
+- Akismet
 	
