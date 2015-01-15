@@ -1276,15 +1276,6 @@ td {
     width: 90%;
   }
 }
-/* line 163, scss/objects/_nav.scss */
-.comic-nav .center {
-  /*
-  
-  NEED TO: display:block the center element then position abs the NEXT button back to top right corner
-  fix heights to auto vertical center txt
-  
-  */
-}
 @media all and (max-width: 730px) {
   /* line 163, scss/objects/_nav.scss */
   .comic-nav .center {
@@ -1294,7 +1285,7 @@ td {
     clear: both;
   }
 }
-/* line 183, scss/objects/_nav.scss */
+/* line 176, scss/objects/_nav.scss */
 .comic-nav div.li {
   font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
@@ -1304,19 +1295,21 @@ td {
   width: 20%;
   text-align: center;
   font-size: .875em;
+  height: 44px;
 }
-/* line 193, scss/objects/_nav.scss */
+/* line 187, scss/objects/_nav.scss */
 .comic-nav div.li.next, .comic-nav div.li.previous {
   width: 26%;
 }
 @media all and (max-width: 730px) {
-  /* line 193, scss/objects/_nav.scss */
+  /* line 187, scss/objects/_nav.scss */
   .comic-nav div.li.next, .comic-nav div.li.previous {
     width: 50%;
+    height: 48px;
   }
 }
 @media all and (max-width: 730px) {
-  /* line 203, scss/objects/_nav.scss */
+  /* line 198, scss/objects/_nav.scss */
   .comic-nav div.li.next {
     display: block;
     top: 0;
@@ -1324,74 +1317,75 @@ td {
     position: absolute;
   }
 }
-/* line 216, scss/objects/_nav.scss */
+/* line 211, scss/objects/_nav.scss */
 .comic-nav div.li.first, .comic-nav div.li.latest, .comic-nav div.li.chapters {
   width: 16%;
 }
 @media all and (max-width: 730px) {
-  /* line 216, scss/objects/_nav.scss */
+  /* line 211, scss/objects/_nav.scss */
   .comic-nav div.li.first, .comic-nav div.li.latest, .comic-nav div.li.chapters {
     width: 33%;
+    height: 48px;
   }
 }
-/* line 224, scss/objects/_nav.scss */
+/* line 220, scss/objects/_nav.scss */
 .comic-nav div.li .st0 {
   fill: #958b79;
 }
-/* line 228, scss/objects/_nav.scss */
+/* line 224, scss/objects/_nav.scss */
 .comic-nav div.li:hover .st0 {
   fill: #38332c;
 }
-/* line 233, scss/objects/_nav.scss */
+/* line 229, scss/objects/_nav.scss */
 .comic-nav div.li a, .comic-nav div.li span {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  line-height: 41px;
+  line-height: 44px;
   height: 100%;
   text-decoration: none;
 }
 @media all and (max-width: 730px) {
-  /* line 233, scss/objects/_nav.scss */
+  /* line 229, scss/objects/_nav.scss */
   .comic-nav div.li a, .comic-nav div.li span {
     line-height: 48px;
   }
 }
 @media all and (max-width: 575px) {
-  /* line 233, scss/objects/_nav.scss */
+  /* line 229, scss/objects/_nav.scss */
   .comic-nav div.li a, .comic-nav div.li span {
     line-height: 41px;
   }
 }
-/* line 250, scss/objects/_nav.scss */
+/* line 246, scss/objects/_nav.scss */
 .comic-nav div.li a:hover, .comic-nav div.li span:hover {
   color: #f9f3e8;
 }
-/* line 257, scss/objects/_nav.scss */
+/* line 253, scss/objects/_nav.scss */
 .comic-nav div.li.inactive .st0 {
   fill: #958b79;
 }
-/* line 260, scss/objects/_nav.scss */
+/* line 256, scss/objects/_nav.scss */
 .comic-nav div.li.inactive a, .comic-nav div.li.inactive span {
   color: #7b6e5b;
 }
 
-/* line 269, scss/objects/_nav.scss */
+/* line 265, scss/objects/_nav.scss */
 .pagination {
   overflow: hidden;
 }
-/* line 272, scss/objects/_nav.scss */
+/* line 268, scss/objects/_nav.scss */
 .pagination li {
   float: left;
   border-right: 1px solid #eee;
 }
-/* line 276, scss/objects/_nav.scss */
+/* line 272, scss/objects/_nav.scss */
 .pagination li:last-child {
   border: 0;
 }
-/* line 281, scss/objects/_nav.scss */
+/* line 277, scss/objects/_nav.scss */
 .pagination a {
   padding: 20px;
 }

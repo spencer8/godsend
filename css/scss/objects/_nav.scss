@@ -171,13 +171,6 @@
 
 		}
 
-/*
-
-NEED TO: display:block the center element then position abs the NEXT button back to top right corner
-fix heights to auto vertical center txt
-
-*/
-
     }
 
 	div.li {
@@ -189,6 +182,7 @@ fix heights to auto vertical center txt
 		width:20%;
 		text-align:center;
 		font-size:.875em;
+		height: 44px;
 
 		&.next, &.previous {
 			width:26%;
@@ -196,6 +190,7 @@ fix heights to auto vertical center txt
 			@media all and (max-width: $bp-full) {
 
 				width: 50%;
+				height:48px;
 
 			}			
 		}
@@ -218,6 +213,7 @@ fix heights to auto vertical center txt
 
 			@media all and (max-width: $bp-full) {
 				width: 33%;
+				height:48px;
 			}			
 		}
 
@@ -236,7 +232,7 @@ fix heights to auto vertical center txt
 			top:0;
 			left:0;
 			width:100%;
-			line-height:41px;
+			line-height:44px;
 			height:100%;
 			text-decoration:none;
 
