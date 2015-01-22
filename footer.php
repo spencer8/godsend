@@ -8,7 +8,7 @@
 ?>
 </div><!--End role=main-->
 
-<footer class="footer" role="contentinfo">
+<div class="footer">
 
 	<div class="wrap">
 		<div class="g-3up">
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 		
-</footer>
+</div>
 <?php wp_footer(); ?>
 
 </body>

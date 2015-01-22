@@ -939,7 +939,7 @@ td {
 /* Grid 3up */
 /* line 55, scss/objects/_layout.scss */
 .g-3up > .gi {
-  width: 27%;
+  width: 26%;
 }
 @media all and (min-width: 500px) {
   /* line 60, scss/objects/_layout.scss */
@@ -1239,6 +1239,7 @@ td {
   width: 50px;
   height: 40px;
   line-height: 40px;
+  text-decoration: none;
 }
 @media all and (max-width: 500px) {
   /* line 114, scss/objects/_nav.scss */
@@ -1247,7 +1248,7 @@ td {
   }
 }
 
-/* line 136, scss/objects/_nav.scss */
+/* line 137, scss/objects/_nav.scss */
 .comic-nav {
   clear: both;
   padding: 0 35px;
@@ -1257,7 +1258,7 @@ td {
   position: relative;
 }
 @media all and (max-width: 730px) {
-  /* line 136, scss/objects/_nav.scss */
+  /* line 137, scss/objects/_nav.scss */
   .comic-nav {
     padding: 0;
     margin: 20px auto 40px;
@@ -1265,19 +1266,19 @@ td {
   }
 }
 @media all and (max-width: 575px) {
-  /* line 136, scss/objects/_nav.scss */
+  /* line 137, scss/objects/_nav.scss */
   .comic-nav {
     width: 75%;
   }
 }
 @media all and (max-width: 420px) {
-  /* line 136, scss/objects/_nav.scss */
+  /* line 137, scss/objects/_nav.scss */
   .comic-nav {
     width: 90%;
   }
 }
 @media all and (max-width: 730px) {
-  /* line 163, scss/objects/_nav.scss */
+  /* line 164, scss/objects/_nav.scss */
   .comic-nav .center {
     display: block;
     width: 101%;
@@ -1285,7 +1286,7 @@ td {
     clear: both;
   }
 }
-/* line 176, scss/objects/_nav.scss */
+/* line 177, scss/objects/_nav.scss */
 .comic-nav div.li {
   font-family: "Lato", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
@@ -1297,19 +1298,19 @@ td {
   font-size: .875em;
   height: 44px;
 }
-/* line 187, scss/objects/_nav.scss */
+/* line 188, scss/objects/_nav.scss */
 .comic-nav div.li.next, .comic-nav div.li.previous {
   width: 26%;
 }
 @media all and (max-width: 730px) {
-  /* line 187, scss/objects/_nav.scss */
+  /* line 188, scss/objects/_nav.scss */
   .comic-nav div.li.next, .comic-nav div.li.previous {
     width: 50%;
     height: 48px;
   }
 }
 @media all and (max-width: 730px) {
-  /* line 198, scss/objects/_nav.scss */
+  /* line 199, scss/objects/_nav.scss */
   .comic-nav div.li.next {
     display: block;
     top: 0;
@@ -1317,26 +1318,26 @@ td {
     position: absolute;
   }
 }
-/* line 211, scss/objects/_nav.scss */
+/* line 212, scss/objects/_nav.scss */
 .comic-nav div.li.first, .comic-nav div.li.latest, .comic-nav div.li.chapters {
   width: 16%;
 }
 @media all and (max-width: 730px) {
-  /* line 211, scss/objects/_nav.scss */
+  /* line 212, scss/objects/_nav.scss */
   .comic-nav div.li.first, .comic-nav div.li.latest, .comic-nav div.li.chapters {
     width: 33%;
     height: 48px;
   }
 }
-/* line 220, scss/objects/_nav.scss */
+/* line 221, scss/objects/_nav.scss */
 .comic-nav div.li .st0 {
   fill: #958b79;
 }
-/* line 224, scss/objects/_nav.scss */
+/* line 225, scss/objects/_nav.scss */
 .comic-nav div.li:hover .st0 {
   fill: #38332c;
 }
-/* line 229, scss/objects/_nav.scss */
+/* line 230, scss/objects/_nav.scss */
 .comic-nav div.li a, .comic-nav div.li span {
   display: block;
   position: absolute;
@@ -1348,44 +1349,44 @@ td {
   text-decoration: none;
 }
 @media all and (max-width: 730px) {
-  /* line 229, scss/objects/_nav.scss */
+  /* line 230, scss/objects/_nav.scss */
   .comic-nav div.li a, .comic-nav div.li span {
     line-height: 48px;
   }
 }
 @media all and (max-width: 575px) {
-  /* line 229, scss/objects/_nav.scss */
+  /* line 230, scss/objects/_nav.scss */
   .comic-nav div.li a, .comic-nav div.li span {
     line-height: 41px;
   }
 }
-/* line 246, scss/objects/_nav.scss */
+/* line 247, scss/objects/_nav.scss */
 .comic-nav div.li a:hover, .comic-nav div.li span:hover {
   color: #f9f3e8;
 }
-/* line 253, scss/objects/_nav.scss */
+/* line 254, scss/objects/_nav.scss */
 .comic-nav div.li.inactive .st0 {
   fill: #958b79;
 }
-/* line 256, scss/objects/_nav.scss */
+/* line 257, scss/objects/_nav.scss */
 .comic-nav div.li.inactive a, .comic-nav div.li.inactive span {
   color: #7b6e5b;
 }
 
-/* line 265, scss/objects/_nav.scss */
+/* line 266, scss/objects/_nav.scss */
 .pagination {
   overflow: hidden;
 }
-/* line 268, scss/objects/_nav.scss */
+/* line 269, scss/objects/_nav.scss */
 .pagination li {
   float: left;
   border-right: 1px solid #eee;
 }
-/* line 272, scss/objects/_nav.scss */
+/* line 273, scss/objects/_nav.scss */
 .pagination li:last-child {
   border: 0;
 }
-/* line 277, scss/objects/_nav.scss */
+/* line 278, scss/objects/_nav.scss */
 .pagination a {
   padding: 20px;
 }

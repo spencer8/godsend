@@ -124,6 +124,32 @@ img.alignleft {
 	background: none;
 }
 
+.ie .gi.credits {
+	width:41%;
+}
+.ie .gi {
+	float: none;
+	display: inline-block;
+}
+
+.ie .footer {
+	margin-top:40px;
+}
+
+.ie .comic-nav div.li {
+	background-color: #958b79;
+}
+
+.ie .comic-nav div.li:hover {
+	background-color: #38332c;
+}
+
+.ie .comments-area {
+	margin: 75px auto 0;
+}
+.ie .nav a {
+	padding: 0 16px;
+}
 /* Internet Explorer 8 */
 .ie8 .site {
 	border: 0;
@@ -225,16 +251,6 @@ img.alignleft {
 	top: 0;
 }
 
-.ie7 .site-header .search-form [type="search"],
-.ie7 .site-header .search-form [type="text"] {
-	background-color: #fff;
-	border: 2px solid #c3c0ab;
-	cursor: text;
-	height: 28px;
-	outline: 0;
-	width: 150px;
-}
-
 .ie7 .entry-header,
 .ie7 .entry-content,
 .ie7 .entry-summary,
@@ -245,16 +261,6 @@ img.alignleft {
 .ie7 .format-status .entry-content,
 .ie7 .format-status .entry-meta {
 	padding-left: 60px;
-}
-
-.ie7 .sidebar .format-status .entry-content,
-.ie7 .sidebar .format-status .entry-meta {
-	padding-left: 60px;
-}
-
-.ie7 .sidebar .post-navigation .nav-links,
-.ie7 .sidebar .paging-navigation .nav-links {
-	width: 604px;
 }
 
 .ie7 .paging-navigation .meta-nav {
@@ -270,10 +276,6 @@ img.alignleft {
 	width: 604px;
 }
 
-.ie7 .site-footer .widget-area {
-	max-width: none;
-	left: auto;
-}
 
 /* RTL for Internet Explorer 7 & 8 */
 .rtl .format-audio .entry-content:before,
