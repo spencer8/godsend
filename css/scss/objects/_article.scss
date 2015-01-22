@@ -142,6 +142,16 @@
 			}
 
 		}
+		img.comic-img {
+			width:700px;
+			height:700px;
+
+			@media all and (max-width: $bp-full) {
+				width: 100%;
+				height:auto;
+			}
+
+		}
 
 		h1 { 
 			float:right; 

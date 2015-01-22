@@ -332,10 +332,10 @@ header, footer, nav, section, article, hgroup, figure {
 
 /* line 1, scss/base/_main.scss */
 body {
-  background: #fff;
+  background: #38332c;
   font: 100%/1.4 Georgia, Cambria, "Times New Roman", Times, serif;
   -webkit-text-size-adjust: 100%;
-  color: #38332c;
+  color: #f9f3e8;
   font-weight: normal;
 }
 
@@ -1397,8 +1397,10 @@ td {
 /* line 4, scss/objects/_main.scss */
 [role=main] {
   overflow: hidden;
-  padding: 0;
+  padding: 0 0 60px;
   margin: 0 auto;
+  background: #fff;
+  color: #38332c;
 }
 @media all and (max-width: 575px) {
   /* line 4, scss/objects/_main.scss */
@@ -1417,7 +1419,7 @@ td {
   color: #f2ebdd;
   line-height: 1.5;
   text-align: left;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   width: 100%;
   background: #38332c;
   padding: 40px 0 0;
@@ -1815,7 +1817,19 @@ td {
     margin-bottom: .3em;
   }
 }
-/* line 146, scss/objects/_article.scss */
+/* line 145, scss/objects/_article.scss */
+.comic .article-header img.comic-img {
+  width: 700px;
+  height: 700px;
+}
+@media all and (max-width: 730px) {
+  /* line 145, scss/objects/_article.scss */
+  .comic .article-header img.comic-img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 156, scss/objects/_article.scss */
 .comic .article-header h1 {
   float: right;
 }
@@ -1825,7 +1839,7 @@ td {
     padding: 0 5%;
   }
 }
-/* line 157, scss/objects/_article.scss */
+/* line 167, scss/objects/_article.scss */
 .comic .pcont {
   clear: both;
   padding: 0 95px;
@@ -1833,7 +1847,7 @@ td {
   margin: 0 35px;
 }
 @media all and (max-width: 730px) {
-  /* line 157, scss/objects/_article.scss */
+  /* line 167, scss/objects/_article.scss */
   .comic .pcont {
     padding: 0 5%;
     width: 90%;
@@ -1841,36 +1855,36 @@ td {
     margin-right: 5%;
   }
 }
-/* line 171, scss/objects/_article.scss */
+/* line 181, scss/objects/_article.scss */
 .comic .pcont p {
   font-size: .9375em;
 }
 
-/* line 179, scss/objects/_article.scss */
+/* line 189, scss/objects/_article.scss */
 .chapters.page .title-card {
   width: 100%;
   text-align: center;
 }
-/* line 183, scss/objects/_article.scss */
+/* line 193, scss/objects/_article.scss */
 .chapters.page .title-card img {
   width: 300px;
   height: auto;
   margin: 2rem 0 0;
 }
-/* line 189, scss/objects/_article.scss */
+/* line 199, scss/objects/_article.scss */
 .chapters.page .title-card h2 {
   margin: .25em 0;
   padding: 0;
 }
-/* line 194, scss/objects/_article.scss */
+/* line 204, scss/objects/_article.scss */
 .chapters.page .title-card a {
   text-decoration: none;
 }
-/* line 197, scss/objects/_article.scss */
+/* line 207, scss/objects/_article.scss */
 .chapters.page .title-card p {
   font-style: italic;
 }
-/* line 202, scss/objects/_article.scss */
+/* line 212, scss/objects/_article.scss */
 .chapters.page .chapter-list {
   -webkit-columns: 100px 3;
   -moz-columns: 100px 3;
@@ -1882,38 +1896,38 @@ td {
   margin: 0 0 1rem;
 }
 @media all and (max-width: 575px) {
-  /* line 202, scss/objects/_article.scss */
+  /* line 212, scss/objects/_article.scss */
   .chapters.page .chapter-list {
     -webkit-columns: 100px 2;
     -moz-columns: 100px 2;
     columns: 100px 2;
   }
 }
-/* line 220, scss/objects/_article.scss */
+/* line 230, scss/objects/_article.scss */
 .chapters.page .chapter-list:last-of-type {
   border: 0;
 }
-/* line 224, scss/objects/_article.scss */
+/* line 234, scss/objects/_article.scss */
 .chapters.page .chapter-list span {
   display: inline-block;
   width: 58%;
 }
-/* line 228, scss/objects/_article.scss */
+/* line 238, scss/objects/_article.scss */
 .chapters.page .chapter-list span:first-of-type {
   width: 35%;
   text-transform: lowercase;
 }
-/* line 234, scss/objects/_article.scss */
+/* line 244, scss/objects/_article.scss */
 .chapters.page .chapter-list a {
   text-decoration: none;
 }
-/* line 237, scss/objects/_article.scss */
+/* line 247, scss/objects/_article.scss */
 .chapters.page .chapter-list a:visited {
   color: #958b79;
 }
 
 /* Wordpress Caption */
-/* line 247, scss/objects/_article.scss */
+/* line 257, scss/objects/_article.scss */
 .wp-caption-text {
   font-style: italic;
 }
